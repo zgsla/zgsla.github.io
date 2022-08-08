@@ -1,1 +1,1 @@
-blog
+hugo blog
