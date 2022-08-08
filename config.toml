@@ -1,4 +1,4 @@
-baseURL = "http://blog-zhanglaiya.vercel.app/"
+baseURL = "https://blog-zhanglaiya.vercel.app/"
 defaultContentLanguage = "cn"
 languageCode = "cn"
 
