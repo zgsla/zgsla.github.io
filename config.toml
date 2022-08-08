@@ -50,7 +50,7 @@ enableRobotsTXT = true
   avatarSize = ""
 
   # Description to display on homepage
-  description = "我叫张来亚，从事软件开发的，懂一些乱七八糟的技术，\n我正在努力梳理到我的这个博客上面，希望记录知识的同事也能分享一下技术给需要的人"
+  description = "我叫张来亚，从事软件开发，会一些乱七八糟的技术，\n正在努力梳理到博客上面，希望记录知识的同时也能分享技术给需要的人"
 
   # Accent color is displayed when you hover over <a> tags
   accentColor = "#FF4D4D"
