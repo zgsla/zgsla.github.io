@@ -29,15 +29,26 @@ enableRobotsTXT = true
     weight = 1
 
   [[menu.main]]
+    # Unique identifier for a menu item
+    identifier = "Algorithm"
+    pre = ""
+    url = "/algorithm/"
+
+    # Display name
+    name = "算法"
+
+    # Weights are used to determine the ordering
+    weight = 2
+  [[menu.main]]
     identifier = "tags"
     name = "标签"
     url = "/tags/"
-    weight = 2
+    weight = 3
     
   [[menu.main]]
     identifier = "github"
     url = "https://github.com/ZhangLaiYa"
-    weight = 3
+    weight = 4
     
     # We use feather-icons: https://feathericons.com/
     pre = "<span data-feather='github'></span>"
@@ -46,7 +57,7 @@ enableRobotsTXT = true
     identifier = "rss"
     url = "/index.xml"
     pre = "<span data-feather='rss'></span>"
-    weight = 4
+    weight = 5
 
 [params]
   # URL for the avatar on homepage
