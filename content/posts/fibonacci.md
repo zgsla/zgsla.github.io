@@ -7,12 +7,13 @@ tags: ["fibnacci", "10**19", "斐波那契"]
 draft: false
 ---
 
-# 斐波那契数列求第n项
+### 定义  
+前两项为1，从第三项开始都满足下面的公式  
+$$k_n = k_{n-1} + k_{n-2}$$
 
+例如 1、1、2、3、5、8、13 ······  
 
-1、1、2、3、5、8、13 ······  
-
-下面是简单的python实现
+根据上面的定义给出下面简单的python实现
 ```python
 def fib(n):
     a = 0
@@ -21,71 +22,76 @@ def fib(n):
         a, b = b, a + b
     return a
 ```
-可以看出，上面的时间复杂度是`O(n)`,可以算是比较优的方式了  
+可以看出，上面算法的时间复杂度是$O(n)$,可以算是比较优的方式了  
 
-现在有个新的需求，求第`10**19`项，由于结果巨大，输出mod 1000000007的结果即可，我尝试在自己的电脑上运行，它很长时间都没有给我结果。
+_现在有个新的需求，求第$10^{19}$项的值，由于结果巨大，输出$mod$ $1000000007$的结果即可，我尝试在自己的电脑上运行，它很长时间都没有给我结果。_
 
-如果需要计算的n为特别大，有没有减少运算次数的方式呢？  
+如果需要计算的$n$为特别大，有没有减少运算次数的方式呢？  
 
-答案是有的，需要使用[斐波那契Q矩阵](https://mathworld.wolfram.com/FibonacciQ-Matrix.html)  
+答案是有的，需要使用到[斐波那契Q矩阵](https://mathworld.wolfram.com/FibonacciQ-Matrix.html)  
 
-<!-- 现在重新回顾一下斐波那契数列的定义；前两项为1，从第三项开始都满足下面的公式
-$$k_n = k_{n-1} + k_{n-2}$$   -->
+这里先介绍一下快速幂运算的概念，则以下均成立
 
-<!-- 可以发现，如果仅仅已知第n-1项，无法求出第n项的值  
+$x^2 = x * x$
 
+$x^4 = x * x * x * x = x^2 * x^2$  
 
-如果将相邻两项组组合成shape为[1,2]的矩阵，并重新定义为序列$s_n$，序列拥有下面的规律  
-$s_1 = \\begin{bmatrix}k_1&k_2\\end{bmatrix}=\\begin{bmatrix}k_1&k_2\\end{bmatrix}$  
-$s_2 = \\begin{bmatrix}k_2&k_3\\end{bmatrix}=\\begin{bmatrix}k_2&k_1 + k_2\\end{bmatrix}$  
-$s_3 = \\begin{bmatrix}k_3&k_4\\end{bmatrix}=\\begin{bmatrix}k_3&k_2 + k_3\\end{bmatrix}$  
-···  
-$s_{n-2} = \\begin{bmatrix}k_{n-2}&k_{n-1}\\end{bmatrix}=\\begin{bmatrix}k_{n-2}&k_{n-3}+k_{n-2}\\end{bmatrix}$  
-$s_{n-1} = \\begin{bmatrix}k_{n-1}&k_n\\end{bmatrix} = \\begin{bmatrix}k_{n-1}&k_{n-2} + k_{n-1}\\end{bmatrix}$
+$x^4$的计算如果用一次项乘4次需要计算3次，但是如果先计算2次项的平方则只需要计算2次。  
 
-那么新序列$s_n$在已知$s_{n-1}$的情况下是可以求出$s_n$的 -->
+同理 $x^{100} = x^{64} * x^{32} * x^4$  
 
-这里先介绍一下矩阵幂运算的概念，下面假设`A`是一个矩阵，则以下均成立
+实际操作中可以将低次项的结果保留起来，计算高次项时利用低次项的结果作为基础  
 
-<!-- $$A^2 = A * A$$
+同时， mod 运算也满足 $(A * B)$ % $C$ = $(A$ % $C)$ * $(B$ % $C)$
 
-$$A^4 = A^2 * A^2$$
+使用幂运算的规则，所以只需要找到一个数或者表达式 $A$ 满足： 
 
-$$A^7 = A^4 * A^2 * A^1$$ -->
+$$k_n = A * k_{n-1}$$  
 
-`A ** 2` = `A` * `A`  
-`A ** 4` = `A ** 2` * `A ** 2`  
-`A ** 100` = `A ** 64` * `A ** 32` * `A ** 4`
+那么求第$n$项$fibonacci$值的问题就可以转化成求 $A^{n-2}$的问题了 
 
-还有一点 mod 运算也满足 `A * B mod C = (A mod C) * (B mod C)`
+但是通过$fibonacci$数列的定义可以知道，仅已知$k_{n-1}$无法确定$k_n$的值，必须要同时已知$k_{n-1}$和$k_{n-2}$才能确定$k_n$的值，即无法找到到 $A$ 满足$k_n = A * k_{n-1}$
 
-由于我们已经清楚了矩阵幂运算的规则，所以只需要找到一个矩阵`A`满足：  
-[`kn-2` `kn-1`] * `A` = [`kn-1` `kn-2+kn-1`]
-<!-- $
-\\begin{bmatrix}
+### 重新定义序列
+
+将原序列的相邻两项看作是一项，间隔为原序列的一项，组成新的序列满足  
+
+$$s_n = (k_{n-1}, k_n)$$
+
+即：常量或常量表达式$A$ 需要满足:  
+
+$$s_n = A * s_{n-1}$$
+
+也即为： 
+
+$$(k_{n-1}, k_n) = A * (k_{n-2}, k_{n-1})$$  
+
+又因为： 
+
+$$k_n = k_{n-1} + k_{n-2}$$  
+
+所以： 
+
+$$(k_{n-1}, k_{n-2}+k_{n-1}) = A * (k_{n-2}, k_{n-1})$$
+
+可以联想到矩阵的乘法，于是将上面最后的结果用矩阵乘法表达：  
+$$
+\begin{bmatrix}
 k_{n-2} & k_{n-1}
-\\end{bmatrix} * A = \\begin{bmatrix}
+\end{bmatrix} * A = \begin{bmatrix}
 k_{n-1} & k_{n-2} + k_{n-1}
-\\end{bmatrix} 
-$   -->
+\end{bmatrix} 
+$$
 
-
-那么求第`n`项fib值就可以转化成求矩阵`A`的`n-2`次幂的问题了  
-很容易可以推导出矩阵
-`A`为 
-```
-[
-    [0, 1], 
-    [1, 1]
-]
-```
-<!-- $A=\\begin{bmatrix}
+可以推导出：  
+$$A=\begin{bmatrix}
 0&1\\\\
 1&1
-\\end{bmatrix}$， -->
-这样的`A`矩阵也被称为[斐波那契Q矩阵](https://mathworld.wolfram.com/FibonacciQ-Matrix.html)，可以应用于解决很多问题。
+\end{bmatrix}$$
 
-下面给出python的实现
+这样的 $A$ 矩阵也被称为[斐波那契Q矩阵](https://mathworld.wolfram.com/FibonacciQ-Matrix.html)，可以应用于解决很多问题。
+
+下面是使用上述方式的python实现
 
 ```python
 def mat_sqrt(m, mod):
@@ -133,4 +139,4 @@ def fib(n):
 ```
 
 注1：*如果使用python，numpy已经提供了矩阵计算的方法，这里自己定义仅仅是为了演示，本文不提倡重复造轮子*  
-注2：*纯python int原则上可以存储无限大，如果使用numpy 需要注意精度问题*
+注2：*纯python int原则上可以存储无限大如果使用numpy 需要注意精度问题*
