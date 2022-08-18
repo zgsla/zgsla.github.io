@@ -26,6 +26,6 @@ def select_sort(lst):
 时间复杂度：  
 &nbsp; &nbsp; 最优：$O(n^2)$  
 &nbsp; &nbsp; 最坏：$O(n^2)$  
-&nbsp; &nbsp; 平均：$O(n^2)$
-
+&nbsp; &nbsp; 平均：$O(n^2)$  
+空间复杂度： $O(1)$  
 稳定性： 不稳定

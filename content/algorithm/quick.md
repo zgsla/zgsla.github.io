@@ -42,5 +42,5 @@ def quick_sort(lst, head, tail):
 &nbsp; &nbsp; 最优：$O(n\log_2n)$  
 &nbsp; &nbsp; 最坏：$O(n^2)$  
 &nbsp; &nbsp; 平均：$O(n\log_2n)$  
-
+空间复杂度： $O(n\log_2n)$   
 稳定性： 不稳定
