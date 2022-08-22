@@ -27,8 +27,8 @@ def radix_sort(lst, max_value):
 
 ```
 时间复杂度：  
-&nbsp; &nbsp; 最优：$O(n*k)$  
-&nbsp; &nbsp; 最坏：$O(n*k)$   
-&nbsp; &nbsp; 平均：$O(n*k)$   
+&nbsp; &nbsp; 最优：$O(n×k)$   
+&nbsp; &nbsp; 最坏：$O(n×k)$   
+&nbsp; &nbsp; 平均：$O(n×k)$   
 空间复杂度： $O(n + k)$  
 稳定性： 稳定
