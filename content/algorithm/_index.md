@@ -1,10 +1,7 @@
 ---
-title: "Algorithm"
+title: "十大经典排序算法"
 type: page
 ---
-
-
-### 面试的时候整理的一些排序算法
 
 1. [冒泡排序](/algorithm/bubble/)
 2. [选择排序](/algorithm/select/)
