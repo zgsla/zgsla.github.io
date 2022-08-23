@@ -1,3 +1,6 @@
+from pip import main
+
+
 def mat_sqrt(m, mod):
         return [
             [
@@ -39,5 +42,7 @@ def fib(n):
         if sbin == '1':
             mat = mat_mul(mat, matrixs[j], mod)
     return mat[1]
-for i in range(1, 10000000):
-    print(fib(i))
+
+
+if __name__ == '__main__':
+    print(fib(10**19))
