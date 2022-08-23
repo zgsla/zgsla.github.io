@@ -1,1 +1,2 @@
-hugo blog
+power by hugo
+theme Gokarna
