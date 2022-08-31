@@ -1,8 +1,8 @@
-baseURL = "https://blog-zhanglaiya.vercel.app/"
+baseURL = "https://zhanglaiya.github.io/"
 defaultContentLanguage = "cn"
 languageCode = "cn"
 
-title = "ZhangLaiYa"
+title = "zhanglaiya"
 
 theme = "gokarna"
 
@@ -47,7 +47,7 @@ enableRobotsTXT = true
     
   [[menu.main]]
     identifier = "github"
-    url = "https://github.com/ZhangLaiYa"
+    url = "https://github.com/zhanglaiya"
     weight = 4
     
     # We use feather-icons: https://feathericons.com/
@@ -119,4 +119,4 @@ code.has-jax {
   showPostsOnHomePage = "popular"
 
   # Footer text
-  footer = "ZhangLaiYa"
+  footer = "zhanglaiya"
