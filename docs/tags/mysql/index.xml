@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>mysql on ZhangLaiYa</title>
-    <link>https://blog-zhanglaiya.vercel.app/tags/mysql/</link>
-    <description>Recent content in mysql on ZhangLaiYa</description>
+    <title>mysql on zhanglaiya</title>
+    <link>https://zhanglaiya.github.io/tags/mysql/</link>
+    <description>Recent content in mysql on zhanglaiya</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
-    <lastBuildDate>Tue, 23 Aug 2022 14:11:38 +0800</lastBuildDate><atom:link href="https://blog-zhanglaiya.vercel.app/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Aug 2022 14:11:38 +0800</lastBuildDate><atom:link href="https://zhanglaiya.github.io/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>mysql 事务隔离级别</title>
-      <link>https://blog-zhanglaiya.vercel.app/posts/mysql-transaction-isolation-level/</link>
+      <link>https://zhanglaiya.github.io/posts/mysql-transaction-isolation-level/</link>
       <pubDate>Tue, 23 Aug 2022 14:11:38 +0800</pubDate>
       
-      <guid>https://blog-zhanglaiya.vercel.app/posts/mysql-transaction-isolation-level/</guid>
+      <guid>https://zhanglaiya.github.io/posts/mysql-transaction-isolation-level/</guid>
       <description>一、先介绍一下mysql事务隔离级别的几个相关的概念。 1、脏读（Dirty Read）： 脏读是读到了其他事务回滚前的脏数据。比如事务B执行过程中修改了数据X，在未提交前，事务A读取了X，而事务B却回滚了，这样事务A就形成了脏读。
 2、不可重复读（Nonrepeatable Read）： 读到了其他的事务已提交的数据（不可重复读的重点是修改），事务A查询了一条数据后，事务B对该条数据进行修改，此时当事务A再次查询该数据时，得到的结果与第一次查询的不一致。
 3、幻读（Phantom Read）： 读到了其他事务已提交的数据（幻读的重点在于新增或者删除），当事务A第一次读取某个范围记录后，事务B新增了一条记录，事务A在此读取这个范围是会多一条记录导致幻读出现。

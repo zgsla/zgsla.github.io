@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>fibnacci on ZhangLaiYa</title>
-    <link>https://blog-zhanglaiya.vercel.app/tags/fibnacci/</link>
-    <description>Recent content in fibnacci on ZhangLaiYa</description>
+    <title>fibnacci on zhanglaiya</title>
+    <link>https://zhanglaiya.github.io/tags/fibnacci/</link>
+    <description>Recent content in fibnacci on zhanglaiya</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
-    <lastBuildDate>Tue, 09 Aug 2022 19:11:54 +0800</lastBuildDate><atom:link href="https://blog-zhanglaiya.vercel.app/tags/fibnacci/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Aug 2022 19:11:54 +0800</lastBuildDate><atom:link href="https://zhanglaiya.github.io/tags/fibnacci/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>斐波那契数列</title>
-      <link>https://blog-zhanglaiya.vercel.app/posts/fibonacci/</link>
+      <link>https://zhanglaiya.github.io/posts/fibonacci/</link>
       <pubDate>Tue, 09 Aug 2022 19:11:54 +0800</pubDate>
       
-      <guid>https://blog-zhanglaiya.vercel.app/posts/fibonacci/</guid>
+      <guid>https://zhanglaiya.github.io/posts/fibonacci/</guid>
       <description>问题 求斐波那契数列第$10^{19}$项的值，由于结果巨大，输出$mod$ $1000000007$的结果即可。
 定义 前两项为1，从第三项开始都满足下面的公式
 $$k_n = k_{n-1} + k_{n-2}$$ $$1,1,2,3,5,8,13\ldots$$
