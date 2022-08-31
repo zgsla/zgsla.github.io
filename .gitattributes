@@ -2,3 +2,7 @@
 # *.css linguist-language=GoLang
 # *.html linguist-language=GoLang
 # *.py linguist-language=GoLang
+
+
+# Auto detect text files and perform LF normalization
+* text=auto
