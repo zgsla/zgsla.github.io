@@ -29,17 +29,6 @@ enableRobotsTXT = true
     weight = 1
 
   [[menu.main]]
-    # Unique identifier for a menu item
-    identifier = "Algorithm"
-    pre = ""
-    url = "/algorithm/"
-
-    # Display name
-    name = "算法"
-
-    # Weights are used to determine the ordering
-    weight = 2
-  [[menu.main]]
     identifier = "tags"
     name = "标签"
     url = "/tags/"
