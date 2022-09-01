@@ -1,5 +1,5 @@
 ---
-title: "Bubble"
+title: "冒泡排序"
 date: 2022-08-16T17:11:26+08:00
 description: "冒泡排序"
 type: "page"

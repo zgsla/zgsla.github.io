@@ -1,5 +1,5 @@
 ---
-title: "Select"
+title: "选择排序"
 date: 2022-08-16T17:31:02+08:00
 description: "选择排序"
 type: "page"

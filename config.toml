@@ -1,4 +1,4 @@
-baseURL = "https://zhanglaiya.github.io/"
+baseURL = "https://zhanglaiya.github.io"
 defaultContentLanguage = "cn"
 languageCode = "cn"
 
@@ -120,3 +120,9 @@ code.has-jax {
 
   # Footer text
   footer = "zhanglaiya"
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>十大经典排序算法</title>
+    <meta name="description" content="不积硅步、无以至千里。">
+    <meta name="keywords" content='blog, gokarna, hugo, 排序算法, Python'>
+
+    <meta property="og:url" content="https://zhanglaiya.github.io/posts/sort-algorithm/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="十大经典排序算法">
+    <meta property="og:description" content="不积硅步、无以至千里。">
+    <meta property="og:image" content="images/1.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="十大经典排序算法">
+    <meta name="twitter:description" content="不积硅步、无以至千里。">
+    <meta property="twitter:domain" content="https://zhanglaiya.github.io/posts/sort-algorithm/">
+    <meta property="twitter:url" content="https://zhanglaiya.github.io/posts/sort-algorithm/">
+    <meta name="twitter:image" content="images/1.jpg">
+
+    
+    <link rel="canonical" href="https://zhanglaiya.github.io/posts/sort-algorithm/" />
+
+    <link rel="stylesheet" type="text/css" href="https://zhanglaiya.github.io/css/normalize.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" type="text/css" href="https://zhanglaiya.github.io/css/main.css">
+    <link disabled id="dark-theme" rel="stylesheet" href="https://zhanglaiya.github.io/css/dark.css">
+
+    <script src="https://zhanglaiya.github.io/js/svg-injector.min.js"></script>
+    <script src="https://zhanglaiya.github.io/js/feather-icons.min.js"></script>
+    <script src="https://zhanglaiya.github.io/js/main.js"></script>
+
+    
+    
+    <script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    // Fix <code> tags after MathJax finishes running. This is a
+    // hack to overcome a shortcoming of Markdown. Discussion at
+    // https://github.com/mojombo/jekyll/issues/199
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://zhanglaiya.github.io">
+                <img src="https://zhanglaiya.github.ioimages/1.jpg" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://zhanglaiya.github.io">zhanglaiya</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://zhanglaiya.github.io/posts/"> 文章 </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://zhanglaiya.github.io/algorithm/"> 算法 </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://zhanglaiya.github.io/tags/"> 标签 </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/zhanglaiya"><span data-feather='github'></span>  </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://zhanglaiya.github.io/index.xml"><span data-feather='rss'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://zhanglaiya.github.io/posts/"> 文章 </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://zhanglaiya.github.io/algorithm/"> 算法 </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://zhanglaiya.github.io/tags/"> 标签 </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/zhanglaiya"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://zhanglaiya.github.io/index.xml"><span data-feather='rss'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>十大经典排序算法</h1>
+        <small role="doc-subtitle"></small>
+        <p class="post-date">
+            August 9, 2022
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://zhanglaiya.github.io/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95">排序算法</a></li>
+        
+            <li class="post-tag"><a href="https://zhanglaiya.github.io/tags/python">Python</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <p>排序算法是《数据结构与算法》中最基本的算法之一。</p>
+<style type='text/css'>
+    table th,
+    table td{
+        padding: 10px
+    }
+    .tb-content{
+        background-color: #F5DEB3
+    }
+    .tb-title2{
+        background-color: #87CEFA
+    }
+</style>
+<table border='1'>
+	<tr>
+	    <th colspan="7" style='text-align: center; background-color: #90EE90' >十大经典排序算法对比</th>
+	</tr >
+	<tr style='heigth: 15px; background-color: #90EE90'>
+	    <th rowspan='2' width='15%'>排序算法</td>
+	    <th colspan='3' width='45%' style='text-align: center'>时间复杂度</td>
+	    <th rowspan='2' width='15%'>空间复杂度</td> 
+        <th rowspan='2' width='15%'>排序方式</td>
+        <th rowspan='2' width='10%' style='text-align: center'>稳定性</td>
+	</tr>
+	<tr style='heigth: 15px; background-color: #90EE90'>
+	    <th style='text-align: center'>平均</td>
+	    <th style='text-align: center'>最好</td>
+	    <th style='text-align: center'>最坏</td>
+	</tr>
+	<tr style='heigth: 5px'>
+	    <td class='tb-title2'><a href='/algorithm/bubble'>冒泡排序</a></td>
+        <td class='tb-content'>$O(n^2)$</td>
+        <td class='tb-content'>$O(n)$</td>
+        <td class='tb-content'>$O(n^2)$  </td>
+        <td class='tb-content'>$O(1)$</td>
+        <td class='tb-content'>内部排序</td>
+        <td class='tb-content' style='text-align: center'>√</td>
+	</tr>
+	<tr>
+	    <td class='tb-title2'><a href='/algorithm/select'>选择排序</a></td>
+        <td class='tb-content'>$O(n^2)$</td>
+        <td class='tb-content'>$O(n^2)$</td>
+        <td class='tb-content'>$O(n^2)$</td>
+        <td class='tb-content'>$O(1)$</td>
+        <td class='tb-content'>内部排序</td>
+        <td class='tb-content' style='text-align: center'>×</td>
+	</tr>
+	<tr>
+	    <td class='tb-title2'><a href='/algorithm/insert'>插入排序</a></td>
+        <td class='tb-content'>$O(n^2)$</td>
+        <td class='tb-content'>$O(n)$</td>
+        <td class='tb-content'>$O(n^2)$</td>
+        <td class='tb-content'>$O(1)$</td>
+        <td class='tb-content'>内部排序</td>
+        <td class='tb-content' style='text-align: center'>√</td>
+	</tr>
+	<tr>
+	    <td class='tb-title2'><a href='/algorithm/shell'>希尔排序</a></td>
+        <td class='tb-content'>$O(n^{1.3})$</td>
+        <td class='tb-content'>$O(n)$</td>
+        <td class='tb-content'>$O(n^2)$</td>
+        <td class='tb-content'>$O(1)$</td>
+        <td class='tb-content'>内部排序</td>
+        <td class='tb-content' style='text-align: center'>×</td>
+	</tr>
+	<tr>
+	    <td class='tb-title2'><a href='/algorithm/merge'>归并排序</a></td>
+        <td class='tb-content'>$O(n\log_2n)$</td>
+        <td class='tb-content'>$O(n\log_2n)$</td>
+        <td class='tb-content'>$O(n\log_2n)$</td>
+        <td class='tb-content'>$O(n)$</td>
+        <td class='tb-content'>外部排序</td>
+        <td class='tb-content' style='text-align: center'>√</td>
+	</tr>
+	<tr>
+	    <td class='tb-title2'><a href='/algorithm/quick'>快速排序</a></td>
+        <td class='tb-content'>$O(n\log_2n)$</td>
+        <td class='tb-content'>$O(n\log_2n)$</td>
+        <td class='tb-content'>$O(n^2)$</td>
+        <td class='tb-content'>$O(n\log_2n)$</td>
+        <td class='tb-content'>内部排序</td>
+        <td class='tb-content' style='text-align: center'>×</td>
+	</tr>
+    <tr>
+	    <td class='tb-title2'><a href='/algorithm/heap'>堆排序</a></td>
+        <td class='tb-content'>$O(n\log_2n)$</td>
+        <td class='tb-content'>$O(n\log_2n)$</td>
+        <td class='tb-content'>$O(n\log_2n)$</td>
+        <td class='tb-content'>$O(1)$</td>
+        <td class='tb-content'>内部排序</td>
+        <td class='tb-content' style='text-align: center'>×</td>
+	</tr>
+    <tr>
+	    <td class='tb-title2'><a href='/algorithm/count'>计数排序</a></td>
+        <td class='tb-content'>$O(n+k)$</td>
+        <td class='tb-content'>$O(n+k)$</td>
+        <td class='tb-content'>$O(n+k)$</td>
+        <td class='tb-content'>$O(k)$</td>
+        <td class='tb-content'>外部排序</td>
+        <td class='tb-content' style='text-align: center'>√</td>
+	</tr>
+    <tr>
+	    <td class='tb-title2'><a href='/algorithm/bucket'>桶排序</a></td>
+        <td class='tb-content'>$O(n+k)$</td>
+        <td class='tb-content'>$O(n+k)$</td>
+        <td class='tb-content'>$O(n^2)$</td>
+        <td class='tb-content'>$O(n + k)$</td>
+        <td class='tb-content'>外部排序</td>
+        <td class='tb-content' style='text-align: center'>√</td>
+	</tr>
+    <tr>
+	    <td class='tb-title2'><a href='/algorithm/radix'>基数排序</a></td>
+        <td class='tb-content'>$O(n×k)$</td>
+        <td class='tb-content'>$O(n×k)$</td>
+        <td class='tb-content'>$O(n×k)$</td>
+        <td class='tb-content'>$O(n + k)$</td>
+        <td class='tb-content'>外部排序</td>
+        <td class='tb-content' style='text-align: center'>√</td>
+	</tr>
+</table>  
+<p><strong>详细说明及代码实现如下：</strong></p>
+<ol>
+<li><a href="/algorithm/bubble/"><font color="blue">冒泡排序</font></a></li>
+<li><a href="/algorithm/select/"><font color="blue">选择排序</font></a></li>
+<li><a href="/algorithm/insert/"><font color="blue">插入排序</font></a></li>
+<li><a href="/algorithm/shell/"><font color="blue">希尔排序</font></a></li>
+<li><a href="/algorithm/quick/"><font color="blue">快速排序</font></a></li>
+<li><a href="/algorithm/merge/"><font color="blue">归并排序</font></a></li>
+<li><a href="/algorithm/heap/"><font color="blue">堆排序</font></a></li>
+<li><a href="/algorithm/count/"><font color="blue">计数排序</font></a></li>
+<li><a href="/algorithm/bucket/"><font color="blue">桶排序</font></a></li>
+<li><a href="/algorithm/radix/"><font color="blue">基数排序</font></a></li>
+</ol>
+
+        </p>
+    </div>
+</div>
+
+
+
+    
+
+        </main><footer class="footer">
+    <span>&copy; 2022 zhanglaiya</span>
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

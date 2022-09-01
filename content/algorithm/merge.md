@@ -1,5 +1,5 @@
 ---
-title: "Merge"
+title: "归并排序"
 date: 2022-08-18T18:50:49+08:00
 description: "归并排序"
 type: "page"

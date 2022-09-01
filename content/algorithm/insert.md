@@ -1,5 +1,5 @@
 ---
-title: "Insert"
+title: "插入排序"
 date: 2022-08-16T17:42:07+08:00
 description: "插入排序"
 type: "page"

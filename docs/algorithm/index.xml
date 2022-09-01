@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>十大经典排序算法 on zhanglaiya</title>
+    <title>Algorithms on zhanglaiya</title>
     <link>https://zhanglaiya.github.io/algorithm/</link>
-    <description>Recent content in 十大经典排序算法 on zhanglaiya</description>
+    <description>Recent content in Algorithms on zhanglaiya</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
     <lastBuildDate>Fri, 19 Aug 2022 18:14:17 +0800</lastBuildDate><atom:link href="https://zhanglaiya.github.io/algorithm/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Radix</title>
+      <title>基数排序</title>
       <link>https://zhanglaiya.github.io/algorithm/radix/</link>
       <pubDate>Fri, 19 Aug 2022 18:14:17 +0800</pubDate>
       
@@ -35,7 +35,7 @@ def bucket_sort(lst): max_value = lst[0] min_value = lst[0] for m in lst: if m &
     </item>
     
     <item>
-      <title>Count</title>
+      <title>计数排序</title>
       <link>https://zhanglaiya.github.io/algorithm/count/</link>
       <pubDate>Fri, 19 Aug 2022 14:37:12 +0800</pubDate>
       
@@ -66,7 +66,7 @@ def heap_sort(lst): length = len(lst) while length &amp;gt; 1: for root in range
     </item>
     
     <item>
-      <title>Merge</title>
+      <title>归并排序</title>
       <link>https://zhanglaiya.github.io/algorithm/merge/</link>
       <pubDate>Thu, 18 Aug 2022 18:50:49 +0800</pubDate>
       
@@ -80,7 +80,7 @@ def merge_sort(lst): &amp;#34;&amp;#34;&amp;#34; 递归分解序列至不可分�
     </item>
     
     <item>
-      <title>Shell</title>
+      <title>希尔排序</title>
       <link>https://zhanglaiya.github.io/algorithm/shell/</link>
       <pubDate>Thu, 18 Aug 2022 18:44:42 +0800</pubDate>
       
@@ -95,7 +95,7 @@ def shell_sort(lst): n = len(lst) gap = n // 2 while gap &amp;gt;= 1: for i in r
     </item>
     
     <item>
-      <title>Quick</title>
+      <title>快速排序</title>
       <link>https://zhanglaiya.github.io/algorithm/quick/</link>
       <pubDate>Tue, 16 Aug 2022 17:59:35 +0800</pubDate>
       
@@ -109,7 +109,7 @@ def quick_sort(lst, head, tail): if head &amp;gt;= tail: return p = lst[head] st
     </item>
     
     <item>
-      <title>Insert</title>
+      <title>插入排序</title>
       <link>https://zhanglaiya.github.io/algorithm/insert/</link>
       <pubDate>Tue, 16 Aug 2022 17:42:07 +0800</pubDate>
       
@@ -125,7 +125,7 @@ def insert_sort(lst): &amp;#34;&amp;#34;&amp;#34;定义一个已排序序列，�
     </item>
     
     <item>
-      <title>Select</title>
+      <title>选择排序</title>
       <link>https://zhanglaiya.github.io/algorithm/select/</link>
       <pubDate>Tue, 16 Aug 2022 17:31:02 +0800</pubDate>
       
@@ -141,7 +141,7 @@ def select_sort(lst): n = len(lst) for i in range(n - 1): min_idx = i for j in r
     </item>
     
     <item>
-      <title>Bubble</title>
+      <title>冒泡排序</title>
       <link>https://zhanglaiya.github.io/algorithm/bubble/</link>
       <pubDate>Tue, 16 Aug 2022 17:11:26 +0800</pubDate>
       

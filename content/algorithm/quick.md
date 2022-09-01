@@ -1,5 +1,5 @@
 ---
-title: "Quick"
+title: "快速排序"
 date: 2022-08-16T17:59:35+08:00
 description: "快速排序"
 type: "page"
