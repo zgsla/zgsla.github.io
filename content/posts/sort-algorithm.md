@@ -7,7 +7,7 @@ tags: ["排序算法", "Python"]
 draft: false
 ---
 
-排序算法是《数据结构与算法》中最基本的算法之一。
+排序算法是《数据结构与算法》中最基本的算法之一。   
 
 
 <style type='text/css'>
@@ -46,7 +46,7 @@ draft: false
         <td class='tb-content'>$O(n^2)$  </td>
         <td class='tb-content'>$O(1)$</td>
         <td class='tb-content'>内部排序</td>
-        <td class='tb-content' style='text-align: center'>√</td>
+        <td class='tb-content' style='text-align: center'>:heavy_check_mark:</td>
 	</tr>
 	<tr>
 	    <td class='tb-title2'><a href='/algorithm/select'>选择排序</a></td>
@@ -55,7 +55,7 @@ draft: false
         <td class='tb-content'>$O(n^2)$</td>
         <td class='tb-content'>$O(1)$</td>
         <td class='tb-content'>内部排序</td>
-        <td class='tb-content' style='text-align: center'>×</td>
+        <td class='tb-content' style='text-align: center'>:x:</td>
 	</tr>
 	<tr>
 	    <td class='tb-title2'><a href='/algorithm/insert'>插入排序</a></td>
@@ -64,7 +64,7 @@ draft: false
         <td class='tb-content'>$O(n^2)$</td>
         <td class='tb-content'>$O(1)$</td>
         <td class='tb-content'>内部排序</td>
-        <td class='tb-content' style='text-align: center'>√</td>
+        <td class='tb-content' style='text-align: center'>:heavy_check_mark:</td>
 	</tr>
 	<tr>
 	    <td class='tb-title2'><a href='/algorithm/shell'>希尔排序</a></td>
@@ -73,7 +73,7 @@ draft: false
         <td class='tb-content'>$O(n^2)$</td>
         <td class='tb-content'>$O(1)$</td>
         <td class='tb-content'>内部排序</td>
-        <td class='tb-content' style='text-align: center'>×</td>
+        <td class='tb-content' style='text-align: center'>:x:</td>
 	</tr>
 	<tr>
 	    <td class='tb-title2'><a href='/algorithm/merge'>归并排序</a></td>
@@ -82,7 +82,7 @@ draft: false
         <td class='tb-content'>$O(n\log_2n)$</td>
         <td class='tb-content'>$O(n)$</td>
         <td class='tb-content'>外部排序</td>
-        <td class='tb-content' style='text-align: center'>√</td>
+        <td class='tb-content' style='text-align: center'>:heavy_check_mark:</td>
 	</tr>
 	<tr>
 	    <td class='tb-title2'><a href='/algorithm/quick'>快速排序</a></td>
@@ -91,7 +91,7 @@ draft: false
         <td class='tb-content'>$O(n^2)$</td>
         <td class='tb-content'>$O(n\log_2n)$</td>
         <td class='tb-content'>内部排序</td>
-        <td class='tb-content' style='text-align: center'>×</td>
+        <td class='tb-content' style='text-align: center'>:x:</td>
 	</tr>
     <tr>
 	    <td class='tb-title2'><a href='/algorithm/heap'>堆排序</a></td>
@@ -100,7 +100,7 @@ draft: false
         <td class='tb-content'>$O(n\log_2n)$</td>
         <td class='tb-content'>$O(1)$</td>
         <td class='tb-content'>内部排序</td>
-        <td class='tb-content' style='text-align: center'>×</td>
+        <td class='tb-content' style='text-align: center'>:x:</td>
 	</tr>
     <tr>
 	    <td class='tb-title2'><a href='/algorithm/count'>计数排序</a></td>
@@ -109,7 +109,7 @@ draft: false
         <td class='tb-content'>$O(n+k)$</td>
         <td class='tb-content'>$O(k)$</td>
         <td class='tb-content'>外部排序</td>
-        <td class='tb-content' style='text-align: center'>√</td>
+        <td class='tb-content' style='text-align: center'>:heavy_check_mark:</td>
 	</tr>
     <tr>
 	    <td class='tb-title2'><a href='/algorithm/bucket'>桶排序</a></td>
@@ -118,7 +118,7 @@ draft: false
         <td class='tb-content'>$O(n^2)$</td>
         <td class='tb-content'>$O(n + k)$</td>
         <td class='tb-content'>外部排序</td>
-        <td class='tb-content' style='text-align: center'>√</td>
+        <td class='tb-content' style='text-align: center'>:heavy_check_mark:</td>
 	</tr>
     <tr>
 	    <td class='tb-title2'><a href='/algorithm/radix'>基数排序</a></td>
@@ -127,7 +127,7 @@ draft: false
         <td class='tb-content'>$O(n×k)$</td>
         <td class='tb-content'>$O(n + k)$</td>
         <td class='tb-content'>外部排序</td>
-        <td class='tb-content' style='text-align: center'>√</td>
+        <td class='tb-content' style='text-align: center'>:heavy_check_mark:</td>
 	</tr>
 </table>  
 

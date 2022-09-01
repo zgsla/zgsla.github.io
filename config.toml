@@ -9,6 +9,8 @@ theme = "gokarna"
 # Automatically generate robots.txt
 enableRobotsTXT = true
 
+enableEmoji = true
+
 [menu]
   [[menu.main]]
     # Unique identifier for a menu item
@@ -50,7 +52,7 @@ enableRobotsTXT = true
 
 [params]
   # URL for the avatar on homepage
-  avatarURL = "images/1.jpg"
+  avatarURL = "/images/1.jpg"
 
   # Choose one of size-xs, size-s, size-m, size-l & size-xl. (Default: size-m)
   avatarSize = ""
