@@ -1,2 +1,2 @@
-power by hugo
-theme Gokarna
+Powered by hugo
+Use Theme Gokarna
