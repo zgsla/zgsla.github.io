@@ -1,8 +1,8 @@
-baseURL = "https://zhanglaiya.github.io"
+baseURL = "https://real1m8.github.io"
 defaultContentLanguage = "cn"
 languageCode = "cn"
 
-title = "zhanglaiya"
+title = "real1m8"
 
 theme = "gokarna"
 
@@ -38,7 +38,7 @@ enableEmoji = true
     
   [[menu.main]]
     identifier = "github"
-    url = "https://github.com/zhanglaiya"
+    url = "https://github.com/real1m8"
     weight = 4
     
     # We use feather-icons: https://feathericons.com/
@@ -58,7 +58,7 @@ enableEmoji = true
   avatarSize = ""
 
   # Description to display on homepage
-  description = "不积硅步、无以至千里。"
+  description = "real 1.8m"
 
   # Accent color is displayed when you hover over <a> tags
   accentColor = "#FF4D4D"
