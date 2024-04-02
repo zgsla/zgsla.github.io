@@ -1,8 +1,8 @@
-baseURL = "https://real1m8.github.io"
+baseURL = "https://zhanglaiya.github.io"
 defaultContentLanguage = "cn"
 languageCode = "cn"
 
-title = "real1m8"
+title = "zhanglaiya"
 
 theme = "gokarna"
 
@@ -38,7 +38,7 @@ enableEmoji = true
     
   [[menu.main]]
     identifier = "github"
-    url = "https://github.com/real1m8"
+    url = "https://github.com/zhanglaiya"
     weight = 4
     
     # We use feather-icons: https://feathericons.com/
